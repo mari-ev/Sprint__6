@@ -8,6 +8,9 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
+    def open_page(self, url: str):
+        self.driver.get(url)
+
     def find_element(self, locator):
         """Найти видимый элемент с ожиданием."""
         return self.wait.until(EC.visibility_of_element_located(locator))

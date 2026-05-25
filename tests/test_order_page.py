@@ -8,7 +8,6 @@ from pages.order_page import OrderPage
 from data.allure_labels import ALLURE_FEATURE_ORDER, ALLURE_STORY_POSITIVE
 
 
-
 @allure.feature(ALLURE_FEATURE_ORDER)
 @allure.story(ALLURE_STORY_POSITIVE)
 class TestOrderFlow:
@@ -25,13 +24,13 @@ class TestOrderFlow:
         order_page = OrderPage(driver)
 
         with allure.step("Открыть главную страницу сервиса"):
-            driver.get(MAIN_PAGE_URL)
+            main_page.open_page(MAIN_PAGE_URL)
 
         with allure.step("Нажать кнопку 'Заказать' в шапке сайта"):
             main_page.click_order_button(position=order_data["entry_point"])
 
         with allure.step("Проверить, что открылась страница оформления заказа"):
-            assert driver.current_url == ORDER_PAGE_URL
+            main_page.wait_for_url_to_be(ORDER_PAGE_URL)
             assert order_page.is_step1_form_displayed()
 
         with allure.step(

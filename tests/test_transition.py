@@ -18,7 +18,7 @@ class TestTransitions:
         transition_page = TransitionPage(driver)
 
         with allure.step("Открыть страницу оформления заказа"):
-            driver.get(ORDER_PAGE_URL)
+            transition_page.open_page(ORDER_PAGE_URL)
 
         with allure.step("Кликнуть на логотип самоката в шапке страницы"):
             transition_page.click_scooter_logo()
@@ -35,7 +35,7 @@ class TestTransitions:
         transition_page = TransitionPage(driver)
 
         with allure.step("Открыть главную страницу сервиса"):
-            driver.get(MAIN_PAGE_URL)
+            transition_page.open_page(MAIN_PAGE_URL)
 
         with allure.step("Кликнуть на логотип Яндекс в шапке сайта"):
             transition_page.click_yandex_logo()
