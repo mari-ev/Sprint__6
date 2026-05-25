@@ -1,0 +1,26 @@
+ORDER_DATA_SETS = [
+    {
+        "name": "Иван",
+        "surname": "Петров",
+        "phone": "+79991234567",
+        "address": "ул. Ленина, д. 1",
+        "station": "Красносельская",
+        "date": "15.05.2024",
+        "rent_period": "двое суток",
+        "color": "black",
+        "comment": "Оставьте у двери",
+        "entry_point": "top",
+    },
+    {
+        "name": "Мария",
+        "surname": "Сидорова",
+        "phone": "+79997654321",
+        "address": "пр-т Мира, д. 10",
+        "station": "Комсомольская",
+        "date": "16.05.2024",
+        "rent_period": "сутки",
+        "color": "grey",
+        "comment": "",
+        "entry_point": "bottom",
+    },
+]
